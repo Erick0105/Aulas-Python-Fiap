@@ -5,3 +5,5 @@ altura = float(input("\nE Qual seria a altura do cilindro? "))
 
 area_base = raio**2 * 3.14
 volume = area_base * altura
+
+print(f'O volume do cilindro atual é igual a {volume}')
