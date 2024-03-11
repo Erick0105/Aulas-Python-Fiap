@@ -5,3 +5,5 @@ decisao = {'círculo':1,'triangulo':2,'quadrado':3,'retangulo':4,'trapezio':5,'l
 
 escolha = int(input(f'{decisao}\n Qual das figuras geometricas acima você quer descobrir a área?'))
 
+if escolha == 1:
+    
