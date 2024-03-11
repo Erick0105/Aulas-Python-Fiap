@@ -1,7 +1,7 @@
 print("Vamos calcular seu IMC\n\n")
 
-peso = float(input("Qual o seu peso atual? "))
-altura = float(input("\nQual a sua altura? "))
+peso = int(input("Qual o seu peso atual? "))
+altura = int(input("\nQual a sua altura em centimetros? "))
 
 IMC = peso / altura**2
 
