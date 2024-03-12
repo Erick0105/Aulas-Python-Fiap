@@ -10,5 +10,5 @@
 ## Erick Alves
 
 ```
- In this directories I making my own projects with the language *Python*
+ In this directories I making my own projects with the language Python
 ```
