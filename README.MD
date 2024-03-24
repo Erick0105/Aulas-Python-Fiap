@@ -1,4 +1,4 @@
-# Projects Python
+# Projectos de Python do curso ADS
 
 <div>
 
@@ -10,9 +10,6 @@
 ## Erick Alves
 
 ```
-Here I separated files by directories. 1TDSPM and myself.
+Sou da turma 1TDSPM e projetos como atividades pedidas em sala estarão todas aqui, com exceção de Cp's, challenges
+e Global Solutions que irão estar em um repositorio expecifico.
 ```
-
-> In **1TDSPM** there are files that refer to projects carried out during the ADS course at FIAP.
-
-> In **myself** there are files that were produced by myself.
