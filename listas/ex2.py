@@ -3,9 +3,9 @@ tamanho = len(lista)
 lista_final = []
 
 for i in range(tamanho):
-    if lista[i] % 3 == 0:
+    if lista[i] % 3 != 0:
         lista_final.append(lista[i])
     else:
-        print(f'O valor {lista[i]} não é divisivel por 3')
+        print(f'O valor {lista[i]}  é divisivel por 3')
 
 print(lista_final)
