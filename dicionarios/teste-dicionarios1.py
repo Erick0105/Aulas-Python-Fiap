@@ -19,4 +19,4 @@ else:
 #    print(chave)
 
 for chave in d1.keys():
-    print(chave)
+    print(chave, "==> ", d1[chave])
