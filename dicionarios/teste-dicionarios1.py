@@ -18,5 +18,7 @@ else:
 #    chave = d1.keys[i]
 #    print(chave)
 
+d1.keys() # {"alunos", "professor", "computadores", "cadeiras", "monitores", "perifericos", "sala_aula"}
+
 for chave in d1.keys():
     print(chave, "==> ", d1[chave])
