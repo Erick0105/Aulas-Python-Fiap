@@ -17,6 +17,15 @@ for i in range(quantidade):
 for p in lista:
     print("Produto: ", p["nome"])
     print(f"cor: {p['cor']} preço: {p['preco']} Unidade de medida: {p['unidade_medida']}")
+
+
+print("Digite o nome do produto a ser pesquisado ==> ")
+n1 = input()
+for p in lista:
+    if n1 == p["nome"]:
+         print("Produto: ", p["nome"])
+         print(f"cor: {p['cor']} preço: {p['preco']} Unidade de medida: {p['unidade_medida']}")
+
 # resposta = int(input("Quantos produtos de feira deseja cadastras?\n"))
 
 # for i in range(resposta):
@@ -27,3 +36,4 @@ for p in lista:
     
 
 # d1 = {"produto1",}
+
