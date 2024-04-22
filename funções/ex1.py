@@ -19,9 +19,19 @@ def pedir_num(text = "Digite um número" ):
 
     return num
         
+def menu ():
+    mensagem = ("----------------------------------\n" +
+               "                 Menu\n\n" 
+               + "Iremos calcular o valor da soma\nde duas váriaveis" 
+               + "\n----------------------------------")
+    print(mensagem)
+    num1 = pedir_num("Me mande um número por favor\n==> ")
+    num2 = pedir_num("Me passa outro número agora\n==> ")
+    
+    return num1, num2
 
-n1 = pedir_num("Me mande um número por favor\n==>")
-n2 = pedir_num("Me passa outro número agora\n==>")
+#Funcionalidade
+n1, n2 = menu()
 soma = n1 + n2
 
 print(f'A soma destes dois números é igual a {soma}')
