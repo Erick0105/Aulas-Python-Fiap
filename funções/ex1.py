@@ -1,6 +1,9 @@
-
-def pedir_num(text):
+def pedir_num(text = "Digite um número" ):
     Texto = text
+    """
+    Função utilizada para pedir números
+    e verifica se o valor digitado é um número mesmo
+    """
 
     valido = False
 
@@ -8,11 +11,13 @@ def pedir_num(text):
         digitado = input(Texto)
 
         try:
-            digitado = float(digitado)
+            num = float(digitado)
             valido = True
+
         except:
             print("Digite um valor que seja um número")
-    return digitado
+
+    return num
         
 
 n1 = pedir_num("Me mande um número por favor\n==>")
