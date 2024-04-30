@@ -1,15 +1,3 @@
-#Cadastrar
-def cadastro():
-    contato = {}
-
-    contato["nome"] = input("Digite aqui o seu nome\n=>")
-    contato["email"] = input("Agora digite seu e-mail\n=>")
-    contato["tele"] = input("E qual séria o seu telefone?\n=>")
-    contato["peso"] = float(input("QUal é o seu peso?\n=>"))
-    contato["idade"] = int(input("E por ultimo qual a sua idade?\n=>"))
-    return contato
-
-
 #Menu
 def menu_principal():
     menu = ("""----------------------------------------
@@ -26,34 +14,69 @@ def menu_principal():
     return int(input("Digite o valor equivalente a função desejada por favor\n=>"))
 
 
+#Cadastrar
+def cadastro( cadastros_realizados ):
+    contato = {}
+    i = cadastros_realizados
+    i = i + 1
+
+
+    contato["nome"] = input("Digite aqui o seu nome\n=>")
+    contato["email"] = input("Agora digite seu e-mail\n=>")
+    contato["tele"] = input("E qual é o seu telefone?\n=>")
+    contato["peso"] = float(input("Qual é o seu peso?\n=>"))
+    contato["idade"] = int(input("E por ultimo qual a sua idade?\n=>"))
+    contato["id"] = f'{i}'
+
+    return contato
+
+
+
+
 #Procurar
 def procurar( lista_contatos ):
-    email_desejado = input("Qual o e-mail da conta que deseja procurar?\n=>")
+    id_desejado = input("Qual o id da conta que deseja procurar?\n=>")
+    print(id_desejado)
+    print(lista_contatos)
 
-    if email_desejado == lista_contatos[0]["email"]:
-        print(f'Os dados desta conta são {lista_contatos[0]}')
+    valor_boolean = id_desejado in lista_contatos
+    if valor_boolean == True:
+        print(f'Os dados desta conta são {lista_contatos[id_desejado]}')
     else:
         print("E-mail não encontrado")
 
-#Sub-menu-Procurar
-def sub_menu_procurar():
-    sub_menu = ("""[1] - Alterar
-    [2] - Excluir
-    [3] - Retornar ao menu principal""")
+#Menu-Procurar
+def menu_procurar():
+    sub_menu = ("""
+                -----------------------------------
+                [1] - Alterar as informações
+                [2] - Excluir as informações
+                [3] - Retornar ao menu principal
+                -----------------------------------""")
     print(sub_menu)
+    resposta = input("O que o senhor deseja fazer dentre estas opções?\n=>")
+
+
 
 #funcionalidade
-
+qnt_cadastros = 0
 repetir = True
+contatos = contatos_gerais_por_id = {}
+
 while repetir == True:
     decisao = menu_principal()
 
     if decisao == 1:
-        contatos_gerais = cadastro()
+        informacoes = cadastro(qnt_cadastros)
+        qnt_cadastros = qnt_cadastros + 1
+        contatos[f'{qnt_cadastros}'] = informacoes
+        print(contatos)
+        
     #elif decisao == 2:
 
     elif decisao == 3:
-        procurar(contatos_gerais)
+        procurar(contatos)
+        menu_procurar()
 
     #elif decisao == 4:
 
