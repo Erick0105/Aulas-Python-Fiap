@@ -11,7 +11,7 @@ def menu_principal():
             [6] - Sair 
             ----------------------------------------""")
     print(menu)
-    return int(input("Digite o valor equivalente a função desejada por favor\n=>"))
+    return int(input("Digite o valor equivalente a função desejada por favor\n=> "))
 
 
 #Cadastrar
@@ -21,11 +21,11 @@ def cadastro( cadastros_realizados ):
     i = i + 1
 
 
-    contato["nome"] = input("Digite aqui o seu nome\n=>")
-    contato["email"] = input("Agora digite seu e-mail\n=>")
-    contato["tele"] = input("E qual é o seu telefone?\n=>")
-    contato["peso"] = float(input("Qual é o seu peso?\n=>"))
-    contato["idade"] = int(input("E por ultimo qual a sua idade?\n=>"))
+    contato["nome"] = input("Digite aqui o seu nome\n=> ")
+    contato["email"] = input("Agora digite seu e-mail\n=> ")
+    contato["tele"] = input("E qual é o seu telefone?\n=> ")
+    contato["peso"] = float(input("Qual é o seu peso?\n=> "))
+    contato["idade"] = int(input("E por ultimo qual a sua idade?\n=> "))
     contato["id"] = f'{i}'
 
     return contato
@@ -38,17 +38,16 @@ Cadastro Realizado com sucesso"""
 f'Seu Id é o {id}, não esqueça'
 "\n--------------------------------")
     print(msg)
-    decisao = input("\nDeseja Voltar ao menu? (S/N)\n=>")
+    decisao = input("\nDeseja Voltar ao menu? (S/N)\n=> ")
     if decisao == "S":
         return True
     elif decisao == "N":
         return False
 
 
-
 #Procurar
 def procurar( lista_contatos ):
-    id_desejado = input("Qual o id da conta que deseja procurar?\n=>")
+    id_desejado = input("Qual o id da conta que deseja procurar?\n=> ")
     print(id_desejado)
     print(lista_contatos)
 
@@ -67,8 +66,7 @@ def menu_procurar():
                 [3] - Retornar ao menu principal
                 -----------------------------------""")
     print(sub_menu)
-    resposta = input("O que o senhor deseja fazer dentre estas opções?\n=>")
-
+    resposta = input("O que o senhor deseja fazer dentre estas opções?\n=> ")
 
 
 #funcionalidade
@@ -78,7 +76,6 @@ contatos = contatos_gerais_por_id = {}
 
 while repetir == True:
     decisao = menu_principal()
-
     if decisao == 1:
         informacoes = cadastro(qnt_cadastros)
         qnt_cadastros = qnt_cadastros + 1
@@ -86,17 +83,12 @@ while repetir == True:
         repetir = menu_cadastro(qnt_cadastros)
         
     #elif decisao == 2:
-
     elif decisao == 3:
         procurar(contatos)
         menu_procurar()
-
     #elif decisao == 4:
-
     #elif decisao == 5:
-
     elif decisao == 6:
         repetir = False
-
 
 print("Programa encerrado")
