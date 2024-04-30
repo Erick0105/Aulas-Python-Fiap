@@ -30,6 +30,19 @@ def cadastro( cadastros_realizados ):
 
     return contato
 
+#Menu-cadastro
+def menu_cadastro( id ):
+    msg = ("""
+--------------------------------
+Cadastro Realizado com sucesso"""
+f'Seu Id é o {id}, não esqueça'
+"\n--------------------------------")
+    print(msg)
+    decisao = input("\nDeseja Voltar ao menu? (S/N)\n=>")
+    if decisao == "S":
+        return True
+    elif decisao == "N":
+        return False
 
 
 
@@ -70,7 +83,7 @@ while repetir == True:
         informacoes = cadastro(qnt_cadastros)
         qnt_cadastros = qnt_cadastros + 1
         contatos[f'{qnt_cadastros}'] = informacoes
-        print(contatos)
+        repetir = menu_cadastro(qnt_cadastros)
         
     #elif decisao == 2:
 
