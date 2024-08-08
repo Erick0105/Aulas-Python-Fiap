@@ -2,8 +2,8 @@ listaNum = [1,2,3,4,5,6,7,8,9,10]
 
 
 def filtrar (listaNumeros, opcaoParImpar = "par"):
-    listaPar = []    
-    listaImpar = []    
+    listaPar = []  
+    listaImpar = []
     for numero in listaNumeros:
         if numero % 2 == 0:
             listaPar.append(numero)
@@ -14,7 +14,13 @@ def filtrar (listaNumeros, opcaoParImpar = "par"):
     else:
         return listaImpar
 
-    
-print(filtrar(listaNum,"impar"))
+def exponenciacaoLista (lista, exponente = 2):
+    listaRetorno = []
+    for numero in lista:
+        listaRetorno.append(numero ** 2)
+    return listaRetorno
+
+listaImpares = filtrar(listaNum, "impar")
+print(exponenciacaoLista(listaImpares))
 
 
