@@ -1,13 +1,13 @@
 from kivy.app import App
 from kivy.uix.label import Label
 from kivy.uix.button import Button
+from kivy.uix.textinput import TextInput
+
 
 
 class HelloWorld(App):
     def build(self):
-        return Button(text="botãozinho",
-                color="green",
-                font_size="20px")
+        return TextInput(font_size="100px",background_color="green")
     
 
 
