@@ -1,0 +1,9 @@
+post https://aula-python-fiap-default-rtdb.firebaseio.com/contatos.json HTTP/1.1
+Content-Type: application/json
+
+{
+    "Nome":"Joao Silva",
+    "Email":"joao@teste.com",
+    "telefone": "(11) 1111-1111"
+}
+
