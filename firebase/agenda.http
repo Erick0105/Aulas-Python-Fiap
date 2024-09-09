@@ -25,3 +25,14 @@ GET https://aula-python-fiap-default-rtdb.firebaseio.com/contatos.json HTTP/1.1
 ###
 
 DELETE https://aula-python-fiap-default-rtdb.firebaseio.com/contatos/-O6Led3VXmcU0ZUnGKxU.json HTTP/1.1
+
+###
+
+PUT https://aula-python-fiap-default-rtdb.firebaseio.com/contatos/-O6LhoD1WzzkiEGwAJYP.json HTTP/1.1
+Content-Type: application/json
+
+{
+    "Nome":"João Santos",
+    "email":"joao.santos@teste.com",
+    "Telefone":"(13)1111-1111"
+}
