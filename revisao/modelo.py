@@ -6,7 +6,7 @@ class Contato:
         self.email = email
     
     def __str__(self):
-        return f'({self.contato_id}) - {self.nome}\n{self.telefone}\n{self.email}'
+        return f"""({self.contato_id}) - {self.nome}\n{self.telefone}\n{self.email}"""
     
 if __name__ == "__main__":
     c1 = Contato(1, "João Silva", "(11) 11111-1111", "joao@teste.com")
